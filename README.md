@@ -21,7 +21,7 @@ A modular Python application for playing audio files to multiple Bluetooth devic
 ### From source
 
 ```bash
-git clone https://github.com/int33k/bluetooth-audio-player.git
+git clone https://github.com/int33k/bluetooth-audio-multiplexer.git
 cd bluetooth-audio-player
 pip install -e .
 ```
@@ -32,16 +32,16 @@ pip install -e .
 
 ```bash
 # Play an audio file to all detected Bluetooth devices
-bt-audio-player path/to/audio/file.mp3
+bt-audio-multiplexer path/to/audio/file.mp3
 
 # List all available audio devices
-bt-audio-player --list-devices path/to/audio/file.mp3
+bt-audio-multiplexer --list-devices path/to/audio/file.mp3
 
 # Play to specific devices
-bt-audio-player --device-indices 1,3,5 path/to/audio/file.mp3
+bt-audio-multiplexer --device-indices 1,3,5 path/to/audio/file.mp3
 
 # Enable debug mode
-bt-audio-player --debug path/to/audio/file.mp3
+bt-audio-multiplexer --debug path/to/audio/file.mp3
 ```
 
 ### As a Python package
@@ -64,7 +64,7 @@ playback.play_audio_to_multiple_devices(wav_file, device_indices)
 
 ## Configuration
 
-The application creates a configuration file at `~/.bluetooth_audio_player/config.json`. You can modify this file to customize the behavior:
+The application creates a configuration file at `~/.bluetooth_audio_multiplexer/config.json`. You can modify this file to customize the behavior:
 
 ```json
 {
