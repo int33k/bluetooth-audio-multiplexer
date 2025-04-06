@@ -4,7 +4,7 @@ A modular Python application for playing audio files to multiple Bluetooth devic
 
 ## Features
 
-- Automatically detect Bluetooth audio devices across Windows, macOS, and Linux
+- Automatically detect Bluetooth audio devices in Windows 10/11.
 - Play audio to multiple Bluetooth devices simultaneously
 - Support for various audio formats (MP3, FLAC, AAC, OGG, etc.) with automatic conversion
 - Filter and select the best audio profiles for each device
