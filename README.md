@@ -18,12 +18,6 @@ A modular Python application for playing audio files to multiple Bluetooth devic
 
 ## Installation
 
-### From PyPI (recommended)
-
-```bash
-pip install bluetooth-audio-player
-```
-
 ### From source
 
 ```bash
