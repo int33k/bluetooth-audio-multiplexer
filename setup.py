@@ -9,8 +9,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="bluetooth-audio-player",
     version="1.0.0",
-    author="Claude",
-    author_email="example@example.com",
+    author="Intekhab",
+    author_email="mintekhabahmad@gmail.com",
     description="Play audio to multiple Bluetooth devices simultaneously",
     long_description=long_description,
     long_description_content_type="text/markdown",
