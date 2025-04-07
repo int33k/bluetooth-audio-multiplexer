@@ -27,7 +27,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "bt-audio-player=bluetooth_audio_player.main:main",
+            "bt-audio-multiplexer=bluetooth_audio_player.main:main",
         ],
     },
 )
