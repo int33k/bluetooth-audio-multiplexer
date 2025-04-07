@@ -28,31 +28,6 @@ def get_windows_bluetooth_devices():
         print(f"Unexpected error: {e}")
         return []
 
-def get_linux_bluetooth_devices():
-    """Get list of active Bluetooth device names on Linux."""
-    try:
-        # Use bluetoothctl to list devices
-        cmd = "bluetoothctl devices | cut -d' ' -f3-"
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=True)
-        
-        bt_device_names = [line.strip() for line in result.stdout.splitlines() if line.strip()]
-        return bt_device_names
-    except Exception as e:
-        print(f"Error getting Linux Bluetooth devices: {e}")
-        return []
-
-def get_macos_bluetooth_devices():
-    """Get list of active Bluetooth device names on macOS."""
-    try:
-        cmd = "system_profiler SPBluetoothDataType | grep 'Name:' | awk -F': ' '{print $2}'"
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=True)
-        
-        bt_device_names = [line.strip() for line in result.stdout.splitlines() if line.strip()]
-        return bt_device_names
-    except Exception as e:
-        print(f"Error getting macOS Bluetooth devices: {e}")
-        return []
-
 def match_with_pyaudio(bt_device_names):
     """
     Matches Bluetooth device names with PyAudio output devices.
